@@ -28,7 +28,14 @@ angular.module('myApp', [
    .constant('version', '0.1')
    .constant('fbUrl', 'https://pesu.firebaseio.com')
    .constant('fbRef', new Firebase('https://pesu.firebaseio.com'))
-   .constant('peer', new Peer({key: 'gtutmmh453tyb9'}));
+   .constant('peer',
+    new Peer({
+        key: 'gtutmmh453tyb9',
+        config: {'iceServers': [
+            { url: 'stun:stun.l.google.com:19302' },
+            { url: 'turn:homeo@turn.bistri.com:80', credential: 'homeo' }
+          ]} /* Sample servers, please use appropriate ones */
+        });
 
 angular.module('myApp')
     .run(function($rootScope) {
