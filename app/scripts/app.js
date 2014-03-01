@@ -60,7 +60,8 @@ angular.module('myApp')
         // Add room
         var ref = new Firebase(fbUrl + '/rooms');
         $scope.rooms = $firebase(ref);
-        $scope.rooms.$add({name: roomName, owner: $rootScope.peerId }).then(function(ref) {
+        var peerId = $rootScope.peerId || peer.id;
+        $scope.rooms.$add({name: roomName, owner: peerId }).then(function(ref) {
             $scope.creating = false;
             $location.path('/rooms/' + ref.name());
             return;
