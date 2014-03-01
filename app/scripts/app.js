@@ -12,7 +12,7 @@ angular.module('myApp', [
         $routeProvider
             .when('/', {
                 templateUrl: 'scripts/views/index.html',
-                controller: 'HeaderShowController'
+                controller: 'MainController'
             })
             .when('/:id', {
                 templateUrl: 'scripts/views/rooms/show.html',

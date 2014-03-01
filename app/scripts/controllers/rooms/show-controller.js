@@ -12,8 +12,9 @@ angular.module('myApp').controller('RoomShowController',
 
     $scope.roomId = $routeParams.id;
     var ref = new Firebase(fbUrl + '/rooms/' + $scope.roomId);
-    $scope.room = $firebase(ref).then(function(room) {
-        console.log(room);
+    $scope.room = $firebase(ref);
+    $scope.room.$on('loaded', function() {
+        $rootScope.roomName = $scope.room.name;
     });
 
 });

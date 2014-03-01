@@ -1,7 +1,8 @@
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation" ng-controller="HeaderShowController">
     <div class="container">
         <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target=".navbar-main-collapse">
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="/">
@@ -19,13 +20,13 @@
                     <a ng-click="deleteRoom()"> <i class="fa fa-sign-out"></i> Exit</a>
                 </li>
                 <li ng-cloak ng-hide="onair">
-                    <a href="#why"> Why?</a>
+                    <a href="#why"> WHY?</a>
                 </li>
                 <li ng-cloak ng-hide="onair">
-                    <a href="#how"> How?</a>
+                    <a href="#how"> HOW?</a>
                 </li>
                 <li ng-cloak ng-hide="onair">
-                    <a href="#who"> Who?</a>
+                    <a href="#who"> WHO?</a>
                 </li>
 
             </ul>
