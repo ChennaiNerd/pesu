@@ -19,6 +19,13 @@ to leverage the power of WebRTC.
 * Firebase
 * Node JS
 
+### How to run
+
+1. Run `bower install`
+2. Run `npm install`
+3. gulp
+4. gulp watch
+
 ### PeerJS configuration
 
     var peer = new Peer({key: 'gtutmmh453tyb9'});

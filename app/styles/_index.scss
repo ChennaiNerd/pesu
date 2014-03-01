@@ -16,20 +16,49 @@
 .intro-body {
     display: table-cell;
     vertical-align: middle;
+
+}
+
+.skew-container {
+    background: #27ae60;
+    margin-bottom: 30px;
+
+    display:inline-block;
+    text-align:center;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -ms-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    transform: skew(-20deg);
+
+    -webkit-transition: background 0.2s;
+    -moz-transition: background 0.2s;
+    -ms-transition: background 0.2s;
+    -o-transition: background 0.2s;
+    transition: background 0.2s;
+}
+
+.brand-heading,
+.intro-text {
+    margin-bottom: 0;
+    display:block;
+    color:#fff;
+    -webkit-transform: skew(20deg) !important;
+    -moz-transform: skew(20deg) !important;
+    -ms-transform: skew(20deg) !important;
+    -o-transform: skew(20deg) !important;
+    transform: skew(20deg) !important;
+
 }
 
 .brand-heading {
     font-size: 38px;
-    // background-color: rgba(0,0,0,0.3);
-    display: inline-block;
-    padding: 10px 30px;
+    padding: 10px 20px;
 }
 
 .intro-text {
     font-size: 18px;
-    // background-color: rgba(0,0,0,0.3);
-    display: inline-block;
-    padding: 10px 30px;
+    padding: 10px 20px;
 }
 
 .content-section {
