@@ -1,0 +1,31 @@
+//
+// Chat messages
+//
+
+.message-box {
+    position: relative;
+    height: 500px;
+    border: 1px solid #999;
+}
+
+.message-header {
+    padding: 10px;
+    background-color: #95a5a6;
+    h2 {
+        color: #444;
+        font-size: 1.2em;
+        margin: 0;
+    }
+}
+
+.message-list {
+    padding: 20px 10px;
+}
+
+.message-text {
+    min-height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-top: 2px solid #999;
+}

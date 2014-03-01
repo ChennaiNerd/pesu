@@ -3,14 +3,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 intro-body">
-                    <div class="skew-container"><h1 class="brand-heading"><i class="fa fa-video-camera"></i> Pesu - Facetime on browser</h1></div>
+                    <div class="skew-container"><h1 class="brand-heading"><i class="fa fa-video-camera"></i> Pesu - FaceTime on browser</h1></div>
                     <div class="skew-container"><p class="intro-text">
                     Pesu is a peer to peer secured communication infrastructure best fitted for
                     companies to communicate with their end customers
                     </p></div>
                     <div class="page-scroll">
-                        <input type="text" class="room-name" ng-model="roomName" placeholder="Room Name" required>
-                        <a class="btn btn-start btn-lg" ng-click="startSession(roomName)"><i class="fa fa-video-camera fa-fw"></i> <span ng-hide="creating">Start</span> <span ng-show="creating">Starting...</span> </a>
+                        <form name="form">
+                            <input type="text" class="room-name" ng-model="roomName" placeholder="Room Name" required>
+                            <button class="btn btn-start btn-lg" ng-click="startSession(roomName)"><i class="fa fa-video-camera fa-fw"></i> <span ng-hide="creating">Start</span> <span ng-show="creating">Starting...</span> </button>
+                        </form>
                     </div>
                 </div>
             </div>

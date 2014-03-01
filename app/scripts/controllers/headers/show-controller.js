@@ -1,5 +1,5 @@
 angular.module('myApp').controller('HeaderShowController',
-        function($scope, $rootScope, $location, $firebase, fbUrl) {
+        function($scope, $rootScope, $location, $firebase, fbUrl, $anchorScroll) {
 
     var ref = new Firebase(fbUrl + '/rooms');
     $scope.rooms = $firebase(ref);
@@ -14,4 +14,10 @@ angular.module('myApp').controller('HeaderShowController',
         $rootScope.roomId = $rootScope.roomName = null;
         $location.path('/');
     };
+
+    $scope.scrollTo = function(id) {
+        $location.hash(id);
+        $anchorScroll();
+    }
+
 });

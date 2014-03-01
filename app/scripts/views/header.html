@@ -14,19 +14,19 @@
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul class="nav navbar-nav">
                 <li ng-cloak ng-show="onair">
-                    <a ng-href="#/{{roomId}}" ng-bind="roomName"></a>
+                    <a ng-href="#/{{roomId}}" ng-bind="roomName">Room</a>
                 </li>
                 <li ng-cloak ng-show="onair">
                     <a ng-click="deleteRoom()"> <i class="fa fa-sign-out"></i> Exit</a>
                 </li>
                 <li ng-cloak ng-hide="onair">
-                    <a href="#why" class="support-link"> WHY</a>
+                    <a ng-click="scrollTo('why')" class="support-link"> WHY</a>
                 </li>
                 <li ng-cloak ng-hide="onair">
-                    <a href="#how" class="support-link"> HOW</a>
+                    <a ng-click="scrollTo('how')" class="support-link"> HOW</a>
                 </li>
                 <li ng-cloak ng-hide="onair">
-                    <a href="#who" class="support-link"> WHO</a>
+                    <a ng-click="scrollTo('who')" class="support-link"> WHO</a>
                 </li>
 
             </ul>

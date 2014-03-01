@@ -1,0 +1,13 @@
+<div class="message-box" ng-controller="ChatShowController">
+
+    <div class="message-header">
+        <h2>Messages</h2>
+    </div>
+    <div class="message-list">
+        <div ng-repeat="msg in messages"><em>{{msg.from}}</em>: {{msg.body}}</div>
+    </div>
+
+    <textarea class="message-text" row="5" ng-model="msg"
+        ng-keydown="addMessage($event)" placeholder="Message..."></textarea>
+
+</div>
