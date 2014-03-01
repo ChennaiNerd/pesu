@@ -1,0 +1,26 @@
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="/">
+                <i class="fa fa-video-camera"></i> Pesu
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <li ng-cloak ng-show="onair">
+                    <a href="#/app"> <i class="fa fa-th"></i> Your Room</a>
+                </li>
+                <li ng-cloak ng-show="onair">
+                    <a ng-click="logout()"> <i class="fa fa-sign-out"></i> Exit</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>

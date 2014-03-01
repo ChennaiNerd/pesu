@@ -1,0 +1,168 @@
+$icon-font-path: "/bower_components/bootstrap-sass/vender/assets/fonts/";
+
+@import 'bootstrap-sass/vendor/assets/stylesheets/bootstrap';
+@import "font-awesome/scss/font-awesome";
+
+@import "variables";
+@import "header";
+@import "index";
+@import "sticky_footer";
+
+body {
+    padding-top: 51px;
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #333;
+    background-color: #fff;
+    webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p {
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+a {
+    color: #28c3ab;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: $brand-color;
+}
+
+// Angular click anchor element
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
+}
+
+.light {
+    font-weight: 400;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.btn-default {
+    border: 1px solid $brand-color;
+    color: #fff;
+    background-color: $brand-color;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    border: 1px solid $brand-color;
+    outline: 0;
+    background-color: $brand-color;
+    box-shadow: 0 0 50px $brand-color;
+}
+
+.btn-huge {
+    padding: 25px;
+    font-size: 26px;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(255,255,255,.2);
+}
+
+::selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(255,255,255,.2);
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    span {
+        text-transform: uppercase;
+    }
+}
+
+.fa-heart {
+    color: red;
+}
+
+.app-progress {
+    height: 50%;
+    width: 50%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    p {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        margin: 20px auto 0;
+    }
+}
+
+.mini-container {
+    margin-top: 30px;
+    max-width: 500px !important;
+}
+
+.medium-container {
+    margin-top: 30px;
+    max-width: 660px !important;
+}
+
+
+
+
+
+
+
+
