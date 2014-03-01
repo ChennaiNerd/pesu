@@ -3,19 +3,17 @@ angular.module('myApp').controller('RoomShowController',
 
     if ($routeParams.id) {
         $scope.roomId = $routeParams.id;
+        $rootScope.roomId = $routeParams.id;
+        $rootScope.onair = !!$scope.roomId
     } else {
         $location.path('/');
         return;
     }
 
     $scope.roomId = $routeParams.id;
-    var ref = new Firebase(fbUrl + '/rooms');
-    $scope.room = $firebase(ref);
-    $scope.addRoom = function() {
-        $scope.rooms.$add({name: $scope.roomName});
-        $scope.roomName = "";
-    };
-    $scope.removeRoom = function(id) {
-        $scope.rooms.$remove(id);
-    };
+    var ref = new Firebase(fbUrl + '/rooms/' + $scope.roomId);
+    $scope.room = $firebase(ref).then(function(room) {
+        console.log(room);
+    });
+
 });

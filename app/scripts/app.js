@@ -19,8 +19,7 @@ angular.module('myApp', [
                 controller: 'RoomShowController'
             })
 
-            //isAuthenticated is set below in the .run() command
-            .otherwise({redirectTo: function() { return isAuthenticated? '/app' : '/'; }});
+            .otherwise({redirectTo: function() { return '/'; }});
     })
    .constant('version', '0.1')
    .constant('fbUrl', 'https://pesu.firebaseio.com')
@@ -28,28 +27,25 @@ angular.module('myApp', [
    .constant('peer', new Peer({key: 'gtutmmh453tyb9'}));
 
 angular.module('myApp')
-
-    /** AUTHENTICATION
-    ***************/
     .run(function($rootScope) {
-    })
+    });
 
-    /** ROOT SCOPE AND UTILS
-    *************************/
-    .run(['$rootScope', '$location', '$log', function($rootScope, $location, $log) {
-        $rootScope.$log = $log;
 
-        $rootScope.keypress = function(key, $event) {
-            $rootScope.$broadcast('keypress', key, $event);
-        };
+angular.module('myApp')
+    .controller('MainController',
+        function($scope, peer, $firebase, fbUrl, $location) {
 
-    }]);
+    $scope.startSession = function (roomName) {
+        if (!roomName) {
+            return alert('Please enter room name');
+        }
 
-angular.module('myApp').controller('MainController', function($scope, peer) {
-
-    $scope.startSession = function () {
-        peer.on('open', function(id) {
-            console.log('My peer ID is: ' + id);
+        // Add room
+        var ref = new Firebase(fbUrl + '/rooms');
+        $scope.rooms = $firebase(ref);
+        $scope.rooms.$add({name: roomName}).then(function(ref) {
+            $location.path('/' + ref.name());
+            return;
         });
     }
 });

@@ -73,21 +73,22 @@ a:focus {
     transition: all .3s ease-in-out;
 }
 
-.btn-default {
-    border: 1px solid $brand-color;
+.btn-start {
+    padding-top: 14px;
+    padding-bottom: 11px;
+    border: 1px solid #3498DB;
     color: #fff;
-    background-color: $brand-color;
+    background-color: #3498DB;
+    box-shadow: 0 3px 0 #2980B9;
 }
 
-.btn-default:hover,
-.btn-default:focus {
-    border: 1px solid $brand-color;
+.btn-start:hover,
+.btn-start:focus {
     outline: 0;
-    background-color: $brand-color;
 }
 
 .btn-huge {
-    padding: 25px;
+    padding: 26px;
     font-size: 26px;
 }
 

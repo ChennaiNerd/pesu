@@ -9,8 +9,8 @@
                     companies to communicate with their end customers
                     </p></div>
                     <div class="page-scroll">
-                        <input type="text" class="room-name" ng-model="roomName" placeholder="Room Name">
-                        <a class="btn btn-default btn-lg" ng-click="startSession()"><i class="fa fa-video-camera fa-fw"></i> <span class="network-name">Start</span></a>
+                        <input type="text" class="room-name" ng-model="roomName" placeholder="Room Name" required>
+                        <a class="btn btn-start btn-lg" ng-click="startSession(roomName)"><i class="fa fa-video-camera fa-fw"></i> <span>Start</span></a>
                     </div>
                 </div>
             </div>
@@ -42,16 +42,16 @@
             <div class="col-sm-4">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-copy fa-stack-1x fa-inverse"></i>
+                    <i class="fa fa-rocket fa-stack-1x fa-inverse"></i>
                 </span>
-                <p>Step 1 - <strong>Copy</strong></p>
+                <p>Step 1 - <strong>Create Room</strong></p>
             </div>
             <div class="col-sm-4">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-paste fa-stack-1x fa-inverse"></i>
+                    <i class="fa fa-share fa-stack-1x fa-inverse"></i>
                 </span>
-                <p>Step 2 - <strong>Paste</strong></p>
+                <p>Step 2 - <strong>Share it</strong></p>
             </div>
             <div class="col-sm-4">
                 <span class="fa-stack fa-lg">
