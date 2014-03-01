@@ -1,0 +1,4 @@
+{
+  "firebase": "pesu",
+  "public": "./dist"
+}
