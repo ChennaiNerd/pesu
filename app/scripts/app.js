@@ -39,11 +39,13 @@ angular.module('myApp')
         if (!roomName) {
             return alert('Please enter room name');
         }
+        $scope.creating = true;
 
         // Add room
         var ref = new Firebase(fbUrl + '/rooms');
         $scope.rooms = $firebase(ref);
         $scope.rooms.$add({name: roomName}).then(function(ref) {
+            $scope.creating = false;
             $location.path('/' + ref.name());
             return;
         });

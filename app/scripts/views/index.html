@@ -10,7 +10,7 @@
                     </p></div>
                     <div class="page-scroll">
                         <input type="text" class="room-name" ng-model="roomName" placeholder="Room Name" required>
-                        <a class="btn btn-start btn-lg" ng-click="startSession(roomName)"><i class="fa fa-video-camera fa-fw"></i> <span>Start</span></a>
+                        <a class="btn btn-start btn-lg" ng-click="startSession(roomName)"><i class="fa fa-video-camera fa-fw"></i> <span ng-hide="creating">Start</span> <span ng-show="creating">Starting...</span> </a>
                     </div>
                 </div>
             </div>
