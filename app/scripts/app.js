@@ -1,3 +1,7 @@
+navigator.getUserMedia  = navigator.getUserMedia ||
+                          navigator.webkitGetUserMedia ||
+                          navigator.mozGetUserMedia;
+
 //
 // Starting point of the application
 //
@@ -33,7 +37,12 @@ angular.module('myApp')
 
 angular.module('myApp')
     .controller('MainController',
-        function($scope, peer, $firebase, fbUrl, $location) {
+        function($scope, $rootScope, peer, $firebase, fbUrl, $location) {
+
+    peer.on('open', function(){
+        $rootScope.peerId = peer.id;
+        console.log(peer.id);
+    });
 
     $scope.startSession = function (roomName) {
         if (!roomName) {
@@ -44,7 +53,7 @@ angular.module('myApp')
         // Add room
         var ref = new Firebase(fbUrl + '/rooms');
         $scope.rooms = $firebase(ref);
-        $scope.rooms.$add({name: roomName}).then(function(ref) {
+        $scope.rooms.$add({name: roomName, owner: $rootScope.peerId }).then(function(ref) {
             $scope.creating = false;
             $location.path('/rooms/' + ref.name());
             return;
