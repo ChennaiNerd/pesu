@@ -92,35 +92,11 @@ a:focus {
     font-size: 26px;
 }
 
-::-moz-selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
-}
-
-::selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255,255,255,.2);
-}
-
-img::selection {
-    background: 0 0;
-}
-
-img::-moz-selection {
-    background: 0 0;
-}
-
 .footer {
     background-color: #000;
     color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-    span {
-        text-transform: uppercase;
-    }
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .fa-heart {
