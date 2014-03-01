@@ -8,6 +8,7 @@ navigator.getUserMedia  = navigator.getUserMedia ||
 angular.module('myApp', [
     'ngRoute',
     'ngResource',
+    'ngCookies',
     'firebase',
     //'ui.bootstrap',
     //'dialogs',

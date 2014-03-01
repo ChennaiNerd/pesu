@@ -9,7 +9,7 @@ angular.module('myApp').controller('ChatShowController',
         if (e.keyCode != 13) {
             return;
         };
-        $scope.messages.$add({ body: $scope.msg});
+        $scope.messages.$add({ body: $scope.msg, from: $rootScope.userName });
         $scope.msg = '';
     }
 

@@ -1,5 +1,6 @@
 angular.module('myApp').controller('HeaderShowController',
-        function($scope, $rootScope, $location, $firebase, fbUrl, $anchorScroll) {
+        function($scope, $rootScope, $location, $firebase,
+                fbUrl, $anchorScroll, $cookieStore) {
 
     var ref = new Firebase(fbUrl + '/rooms');
     $scope.rooms = $firebase(ref);
@@ -18,6 +19,14 @@ angular.module('myApp').controller('HeaderShowController',
     $scope.scrollTo = function(id) {
         $location.hash(id);
         $anchorScroll();
+    }
+
+    $scope.changeName = function () {
+        var name = prompt('Please enter your name');
+        if (name) {
+            $rootScope.userName = name;
+            $cookieStore.put('userName', userName);
+        }
     }
 
 });

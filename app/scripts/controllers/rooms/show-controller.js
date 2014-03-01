@@ -1,6 +1,6 @@
 angular.module('myApp').controller('RoomShowController',
         function($scope, $rootScope, $firebase, $location,
-                 $routeParams, fbUrl, peer, $window) {
+                 $routeParams, fbUrl, peer, $window, $cookieStore) {
 
     if ($routeParams.id) {
         $scope.roomId = $routeParams.id;
@@ -21,6 +21,18 @@ angular.module('myApp').controller('RoomShowController',
             $rootScope.onair = false;
             $location.path('/');
             return;
+        }
+
+        // Get user name
+        var userName = $cookieStore.get('userName');
+        if (userName) {
+            $rootScope.userName = userName;
+        } else {
+            if (peer.id === $scope.room.owner) {
+                $rootScope.userName = 'Guest 1';
+            } else {
+                $rootScope.userName = 'Guest 2';
+            }
         }
 
         // Create user media
@@ -72,7 +84,7 @@ angular.module('myApp').controller('RoomShowController',
                 }
 
             }, function(err){
-                  console.log('Failed to get local stream' ,err);
+                  console.log('Failed to get local stream', err);
                 // $('#step1-error').show();
             });
     }

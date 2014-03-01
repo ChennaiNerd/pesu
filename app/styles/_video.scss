@@ -1,6 +1,10 @@
 //
 // Video
 
+.video-container {
+    text-align: center;
+}
+
 #my-video {
   margin-top: 15px;
   width: 280px;
@@ -11,7 +15,7 @@
 #their-video {
   width: 100%;
   height: 75%;
-  max-height: 480px;
+  max-height: 430px;
   background-color: #eee;
 }
 
