@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul class="nav navbar-nav">
                 <li ng-cloak ng-show="onair">
-                    <a ng-href="#/rooms/{{roomId}}">Room: <span ng-bind="roomName" class="room-name"></span></a>
+                    <a ng-href="#/rooms/{{roomId}}"><span class="text-muted">Room: </span><span ng-show="roomName"  ng-bind="roomName" class="room-name"></span></a>
                 </li>
                 <li ng-cloak ng-show="onair">
                     <a ng-click="deleteRoom()"> <i class="fa fa-sign-out"></i> Exit</a>

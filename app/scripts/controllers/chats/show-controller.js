@@ -10,7 +10,7 @@ angular.module('myApp').controller('ChatShowController',
             return;
         };
         $scope.messages.$add({ body: $scope.msg});
-        $scope.msg = "";
+        $scope.msg = '';
     }
 
 });
