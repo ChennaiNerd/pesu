@@ -14,7 +14,7 @@ angular.module('myApp', [
                 templateUrl: 'scripts/views/index.html',
                 controller: 'MainController'
             })
-            .when('/:id', {
+            .when('/rooms/:id', {
                 templateUrl: 'scripts/views/rooms/show.html',
                 controller: 'RoomShowController'
             })
@@ -46,7 +46,7 @@ angular.module('myApp')
         $scope.rooms = $firebase(ref);
         $scope.rooms.$add({name: roomName}).then(function(ref) {
             $scope.creating = false;
-            $location.path('/' + ref.name());
+            $location.path('/rooms/' + ref.name());
             return;
         });
     }
