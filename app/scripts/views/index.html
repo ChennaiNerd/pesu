@@ -3,13 +3,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 intro-body">
-                    <div class="skew-container"><h1 class="brand-heading">Pesu - Facetime on browser</h1></div>
+                    <div class="skew-container"><h1 class="brand-heading"><i class="fa fa-video-camera"></i> Pesu - Facetime on browser</h1></div>
                     <div class="skew-container"><p class="intro-text">
                     Pesu is a peer to peer secured communication infrastructure best fitted for
                     companies to communicate with their end customers
                     </p></div>
                     <div class="page-scroll">
-                        <a  href="#/app" class="btn btn-default btn-lg" ng-click="login()"><i class="fa fa-video-camera fa-fw"></i> <span class="network-name">Start</span></a>
+                        <input type="text" class="room-name" ng-model="roomName" placeholder="Room Name">
+                        <a class="btn btn-default btn-lg" ng-click="startSession()"><i class="fa fa-video-camera fa-fw"></i> <span class="network-name">Start</span></a>
                     </div>
                 </div>
             </div>
@@ -17,18 +18,18 @@
     </div>
 </section>
 
-<section id="why" class="content-section">
+<section id="why" class="content-section why">
     <div class="container">
         <div class="row">
             <h2>Why?</h2>
             <div class="col-sm-4">
-                No Plugin. No Download. Use your Browser.
+                <h4>No Plugin. No Download. Use your Browser.</h4>
             </div>
             <div class="col-sm-4">
-                Peer to peer communication without login
+                <h4>Peer to peer communication without login</h4>
             </div>
             <div class="col-sm-4">
-                Hassle free Audio/Video chat
+                <h4>Hassle free Audio/Video chat</h4>
             </div>
         </div>
     </div>
@@ -43,21 +44,21 @@
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-copy fa-stack-1x fa-inverse"></i>
                 </span>
-                <p>Step 1 - Copy</p>
+                <p>Step 1 - <strong>Copy</strong></p>
             </div>
             <div class="col-sm-4">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-paste fa-stack-1x fa-inverse"></i>
                 </span>
-                <p>Step 2 - Paste</p>
+                <p>Step 2 - <strong>Paste</strong></p>
             </div>
             <div class="col-sm-4">
                 <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-video-camera fa-stack-1x fa-inverse"></i>
                 </span>
-                <p>Step 3 - Video Chat</p>
+                <p>Step 3 - <strong>Video Chat</strong></p>
             </div>
         </div>
     </div>
@@ -66,9 +67,22 @@
 <section id="who" class="content-section who">
     <div class="container">
         <div class="row">
-            <h2>who?</h2>
-            <div class="col-lg-8 col-lg-offset-2">
-                <p>We are Chennai Nerd.</p>
+            <h2>Who?</h2>
+            <p class="subtitle">We are Chennai Nerd.</p>
+            <div class="col-lg-6 col-lg-offset-4 team">
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <img src="/images/fizer.jpg" class="rotator img-circle img-responsive img-center img-thumbnail">
+                        <h4>Fizer Khan</h4>
+                        <a href="//www.twitter.com/fizerkhan" target="_blank" class="twitter social"><i class="fa fa-twitter"></i> fizerkhan</a>
+                    </div>
+                    <div class="col-sm-4 text-center">
+                        <img src="/images/yogeswaran.jpg" class="rotator img-circle img-responsive img-center img-thumbnail">
+                        <h4>Yogeeswaran</h4>
+                        <a href="//www.twitter.com/yogeswarant" target="_blank" class="twitter social"><i class="fa fa-twitter"></i> yogeswarant</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

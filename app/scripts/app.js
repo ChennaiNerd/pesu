@@ -14,13 +14,18 @@ angular.module('myApp', [
                 templateUrl: 'scripts/views/index.html',
                 controller: 'HeaderShowController'
             })
+            .when('/:id', {
+                templateUrl: 'scripts/views/rooms/show.html',
+                controller: 'RoomShowController'
+            })
 
             //isAuthenticated is set below in the .run() command
             .otherwise({redirectTo: function() { return isAuthenticated? '/app' : '/'; }});
     })
    .constant('version', '0.1')
    .constant('fbUrl', 'https://pesu.firebaseio.com')
-   .constant('fbRef', new Firebase('https://pesu.firebaseio.com'));
+   .constant('fbRef', new Firebase('https://pesu.firebaseio.com'))
+   .constant('peer', new Peer({key: 'gtutmmh453tyb9'}));
 
 angular.module('myApp')
 
@@ -40,6 +45,11 @@ angular.module('myApp')
 
     }]);
 
+angular.module('myApp').controller('MainController', function($scope, peer) {
 
-angular.module('myApp').controller('MainController', function($scope) {
+    $scope.startSession = function () {
+        peer.on('open', function(id) {
+            console.log('My peer ID is: ' + id);
+        });
+    }
 });
