@@ -4,7 +4,7 @@ angular.module('myApp').controller('RoomShowController',
     if ($routeParams.id) {
         $scope.roomId = $routeParams.id;
         $rootScope.roomId = $routeParams.id;
-        $rootScope.onair = !!$scope.roomId
+        $rootScope.onair = !!$scope.roomId;
     } else {
         $location.path('/');
         return;
@@ -15,6 +15,11 @@ angular.module('myApp').controller('RoomShowController',
     $scope.room = $firebase(ref);
     $scope.room.$on('loaded', function() {
         $rootScope.roomName = $scope.room.name;
+        if (!$rootScope.roomName) {
+            $rootScope.roomId = null;
+            $rootScope.onair = false;
+            $location.path('/');
+        }
     });
 
 });
