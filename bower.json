@@ -1,0 +1,24 @@
+{
+  "name": "pesu",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "git://github.com/twbs/bootstrap-sass.git#v3.1.0",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2",
+    "angular": "~1.2.0",
+    "json3": "~3.2.5",
+    "es5-shim": "~2.0.8",
+    "angular-route": "~1.2.0",
+    "angular-resource": "~1.2.0",
+    "angular-bootstrap": "~0.6.0",
+    "angular-flash": "~0.1.10",
+    "font-awesome": "~4.0.3",
+    "momentjs": "~2.4.0",
+    "firebase": "~1.0.2",
+    "angularfire": "~0.6.0",
+    "firebase-simple-login": "~1.2.5",
+    "peerjs": "*"
+  },
+
+  "devDependencies": {}
+}
