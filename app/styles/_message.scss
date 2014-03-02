@@ -56,12 +56,19 @@
     -moz-border-radius: 10px;
     border-radius: 10px;
     margin-bottom: 5px;
-    margin-left: 5px;
     word-wrap: break-word;
 }
 
+.bubble.left {
+    margin-left: 5px;
+}
 
-.bubble:after {
+.bubble.right {
+    margin-left: -5px;
+    background: #d9ceb2;
+}
+
+.bubble.left:after {
     content: '';
     position: absolute;
     border-style: solid;
@@ -71,5 +78,18 @@
     width: 0;
     z-index: 1;
     left: -15px;
+    top: 12px;
+}
+
+.bubble.right:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 8px 0 8px 15px;
+    border-color: transparent #d9ceb2;
+    display: block;
+    width: 0;
+    z-index: 1;
+    right: -15px;
     top: 12px;
 }

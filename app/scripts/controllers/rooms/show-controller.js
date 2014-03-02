@@ -55,12 +55,12 @@ angular.module('myApp').controller('RoomShowController',
 
     $scope.makeCall = function(room){
         // Initiate a call!
-        var call = peer.call(room.owner, window.localStream);
+        var call = peer.call(room.owner, $window.localStream);
         step3(call);
     }
 
     $scope.endCall = function() {
-        window.existingCall.close();
+        $window.existingCall.close();
         step2();
     }
 

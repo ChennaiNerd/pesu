@@ -1,6 +1,6 @@
 angular.module('myApp').controller('HeaderShowController',
         function($scope, $rootScope, $location, $firebase,
-                fbUrl, $anchorScroll, $cookieStore) {
+                fbUrl, $anchorScroll, $cookieStore, $window) {
 
     var ref = new Firebase(fbUrl + '/rooms');
     $scope.rooms = $firebase(ref);
@@ -13,6 +13,10 @@ angular.module('myApp').controller('HeaderShowController',
         $scope.rooms.$remove($rootScope.roomId);
         $rootScope.onair = false;
         $rootScope.roomId = $rootScope.roomName = null;
+        // Hang up on an existing call if present
+        if ($window.existingCall) {
+            $window.existingCall.close();
+        }
         $location.path('/');
     };
 
