@@ -3,6 +3,14 @@
 
 .video-container {
     text-align: center;
+    position: relative;
+
+    .connection-progress {
+        position: absolute;
+        top: 25%;
+        left: 40%;
+        font-size: 2em;
+    }
 }
 
 #my-video {

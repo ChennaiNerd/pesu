@@ -2,6 +2,7 @@ angular.module('myApp').controller('RoomShowController',
         function($scope, $rootScope, $firebase, $location,
                  $routeParams, fbUrl, peer, $window, $cookieStore) {
 
+    $scope.connecting = false;
     if ($routeParams.id) {
         $scope.roomId = $routeParams.id;
         $rootScope.roomId = $routeParams.id;
@@ -41,7 +42,9 @@ angular.module('myApp').controller('RoomShowController',
     });
 
     // Receiving a call
-    peer.on('call', function(call){
+    peer.on('call', function(call) {
+        $scope.connecting = true;
+
         // Answer the call automatically (instead of prompting user) for demo purposes
         call.answer($window.localStream);
         step3(call);
@@ -53,7 +56,9 @@ angular.module('myApp').controller('RoomShowController',
         step2();
     });
 
-    $scope.makeCall = function(room){
+    $scope.makeCall = function(room) {
+        $scope.connecting = true;
+
         // Initiate a call!
         var call = peer.call(room.owner, $window.localStream);
         step3(call);
@@ -91,6 +96,7 @@ angular.module('myApp').controller('RoomShowController',
 
 
     function step2 () {
+        $scope.connecting = false;
         // $('#step1, #step3').hide();
         // $('#step2').show();
     }
@@ -104,6 +110,7 @@ angular.module('myApp').controller('RoomShowController',
         // Wait for stream on the call, then set peer video display
         call.on('stream', function(stream){
             angular.element('#their-video').prop('src', URL.createObjectURL(stream));
+            $scope.connecting = false;
         });
 
         // UI stuff
