@@ -9,6 +9,7 @@ angular.module('myApp', [
     'ngRoute',
     'ngResource',
     'ngCookies',
+    'ngSanitize',
     'firebase',
     //'ui.bootstrap',
     //'dialogs',
