@@ -116,8 +116,8 @@ angular.module('myApp').controller('RoomShowController',
         // UI stuff
         $window.existingCall = call;
         call.on('close', step2);
-        angular.element('#step1, #step2').hide();
-        angular.element('#step3').show();
+        // angular.element('#step1, #step2').hide();
+        // angular.element('#step3').show();
     }
 
 });
