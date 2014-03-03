@@ -25,7 +25,3 @@ to leverage the power of WebRTC.
 2. Run `npm install`
 3. gulp
 4. gulp watch
-
-### PeerJS configuration
-
-    var peer = new Peer({key: 'gtutmmh453tyb9'});
